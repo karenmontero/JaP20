@@ -1,0 +1,51 @@
+/*.buscador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%,-50%);
+    background: rgb(189, 57, 134);
+    padding: 10px;
+    height: 80px;
+    border-radius: 70px;
+}
+.buscartexto{
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    float: left;
+    line-height: 60px;
+    width: auto;
+}
+.input{
+    border: none;
+    color: black;
+}*/
+
+fieldset{
+    background: #fff;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 0 0 0 40px;
+}
+input, button{
+    position: relative;
+    width: 200px;
+    height: 50px;
+    padding: 0;
+}
+input{
+    border: none;
+    color: #666;
+}
+button{
+    font-size: 1.5;
+    width: 50px;
+    border:none;
+    background: #333333;
+}
+

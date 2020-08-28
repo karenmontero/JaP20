@@ -6,23 +6,23 @@ var currentSortCriteria = undefined;
 var minCount = undefined;
 var maxCount = undefined;
 
-function sortCategories(criteria, array){
+function sortCategories(criteria, array){ //Función general para ordenar
     let result = [];
-    if (criteria === ORDER_ASC_BY_NAME)
+    if (criteria === ORDER_ASC_BY_NAME) // Compara con le criterio "AZ" 
     {
-        result = array.sort(function(a, b) {
-            if ( a.name < b.name ){ return -1; }
-            if ( a.name > b.name ){ return 1; }
-            return 0;
+        result = array.sort(function(a, b) { //Hace un sort ascendente
+            if ( a.name < b.name ){ return -1; } //a es menor que b
+            if ( a.name > b.name ){ return 1; } //a es mayor que b
+            return 0; // a y b son iguales
         });
-    }else if (criteria === ORDER_DESC_BY_NAME){
-        result = array.sort(function(a, b) {
-            if ( a.name > b.name ){ return -1; }
-            if ( a.name < b.name ){ return 1; }
-            return 0;
+    }else if (criteria === ORDER_DESC_BY_NAME){ //Compara con le criterio "AZ"
+        result = array.sort(function(a, b) { // Hace un sort descendente, invierte el ordén.
+            if ( a.name > b.name ){ return -1; } //a es mayor qye b 
+            if ( a.name < b.name ){ return 1; } //a es menor que b
+            return 0; // a y b son iguales
         });
-    }else if (criteria === ORDER_BY_PROD_COUNT){
-        result = array.sort(function(a, b) {
+    }else if (criteria === ORDER_BY_PROD_COUNT){ //Compara con el criterio "Cant."
+        result = array.sort(function(a, b) { 
             let aCount = parseInt(a.productCount);
             let bCount = parseInt(b.productCount);
 
