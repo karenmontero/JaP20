@@ -161,6 +161,15 @@ CONTENT
 	color: #084B8A;
 }
 
+#forgot_pswd{
+	color: #ffffff;
+
+}
+
+#form-group{
+	color: #ffffff;
+}
+
 .login-form .content .input:focus {
 	background: #dfe9ec;
 	color: #084B8A;
