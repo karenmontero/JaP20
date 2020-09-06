@@ -14,9 +14,9 @@ function showProductsList(array){
         let products = array[i];
 
         htmlContentToAppend += `
-        <div class="list-group-item list-group-item-action">
+        <a class="list-group-item list-group-item-action" href="product-info.html">
             <div class="row">
-                <div class="col-3">
+                <div class="col-3">div
                     <img src="` + products.imgSrc + `" alt="` + products.description +` " class="img-thumbnail">
                 </div>
                 <div class="col">
@@ -30,10 +30,9 @@ function showProductsList(array){
                  <p>
                  `+ products.currency + " " + products.cost + ` 
                 </p>
-                </div>
-                
+                </div>  
             </div>
-        </div>
+        </a>
         `
 
         document.getElementById("product-list-container").innerHTML = htmlContentToAppend;
