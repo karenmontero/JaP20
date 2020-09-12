@@ -41,13 +41,24 @@
 
         <dt>Moneda</dt>
         <dd>
-          <p id="productCurrency"></p>
+          <p id="productCurrency" ></p>
         </dd>  
 
-        <dt>Precio de productos en la categoría</dt>
+        <dt>Precio</dt>
         <dd>
           <p id="productCost"></p>
         </dd>
+
+        <dt>Categoria</dt>
+        <dd>
+          <p id="productCategory"></p>
+        </dd>  
+
+        <dt>Cantidad de productos vendidos</dt>
+        <dd>
+          <p id="productSoldCount"></p>
+        </dd>
+
 
         <dt>Imágenes ilustrativas</dt>
         <dd>
@@ -55,7 +66,75 @@
           </div>
         </dd>
       </dl>
+
+      <div>
+        <dt>Productos relacionados</dt>
+        <hr class="my-3">
+        <dd>
+          <div class="container-fluid">
+            <div class="row" id="relatedProductContainer">                
+            </div>
+          </div>
+    </div>
+    <hr>
+    
+      <h4 class="commentTitle"><strong>Comentarios</strong></h4>
+        <div>
+          <ul id="comments">
+          </ul>
+        </div>
+        <div>
+          <ul id="newcomment">
+          </ul>
+        </div>
+
+        <br>
+        <div>
+        <h4 class="commentTitle">Deja un comentario aquí</h4>
+        <form>
+          <dd>
+            <div class="row text-center text-lg-left pt-2" id="comment">
+              <textarea name="comment" placeholder="Introduzca aquí sus comentarios" class="comentario" rows=5 cols=130 required autofocus></textarea>
+            </div>
+          </dd>
+        </dl>
+      </form>
+      
+  </div>
+    <tr>
+      <td>
+    <h4>Califica el producto</h4>
+    <div class="valoracion">
+      <dt class="estrella" required>
+      <button>
+          <i class="fas fa-star"></i>
+      </button>
+      <button>
+          <i class="fas fa-star"></i>
+      </button>
+      <button>
+          <i class="fas fa-star"></i>
+      </button>
+      <button>
+          <i class="fas fa-star"></i>
+      </button>
+      <button>
+          <i class="fas fa-star"></i>
+      </button>
+    </dt>
+  </div>
+  <br>
+    <input type="button" onclick="newcomment()" value="Enviar">
+    </td>
+    </tr>
+    </table>
+     </div>
+
+     <br>
       <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Ver productos</a>
+    </div>
+    <div>
+      <br>
     </div>
   </main>
   <footer class="text-muted">
