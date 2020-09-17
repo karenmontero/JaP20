@@ -4,3 +4,10 @@
 document.addEventListener("DOMContentLoaded", function (e) {
 
 });
+
+
+//Cerrar sesión
+function cerrarSesion() {
+        localStorage.removeItem(nombre);
+        localStorage.removeItem(password);
+}
