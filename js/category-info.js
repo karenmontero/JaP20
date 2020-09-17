@@ -1,5 +1,6 @@
 var category = {};
 
+//Añade un div donde se muestran la galeria de imagenes
 function showImagesGallery(array){
 
     let htmlContentToAppend = "";

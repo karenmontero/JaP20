@@ -20,7 +20,7 @@ function showImagesGallery(array){
         document.getElementById("productImages").innerHTML = htmlContentToAppend;
     }
 }
-
+//Funcion que muestra los productos relacionados al que estamos viendo.
  function showRelatedProducts(relatedProductArray) {
     getJSONData(PRODUCTS_URL).then(function (resultObj) {
         if (resultObj.status === "ok") {
@@ -52,7 +52,7 @@ function showImagesGallery(array){
 };
 
 
-
+//Comentarios de los usuarios y su puntiación en estrellas.
     getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function(resultObj){
         if (resultObj.status === "ok")
         {
@@ -90,15 +90,8 @@ function showImagesGallery(array){
 
 
         
- 
+//Guardar nuevo comentario 
 function newcomment(comentario){
-//     if ((localStorage.comentario != undefined) && (localStorage.calificacion != undefined)) {
-//         document.getElementsByClassName("comentario").innerHTML = "Nombre: " + localStorage.nombre;
-//         document.getElementsByClassName("input password").innerHTML= " Password: " + localStorage.password;
-//     } else {
-//         document.getElementsByClassName("input password").innerHTML = "No has introducido tu contraseña";
-//     }
-// }
     localStorage.comentario = document.getElementsByClassName("comentario").value;
     localStorage.calificacion = document.getElementsByClassName("calificacion").value;
     alert ("Su comentario a sido enviado con exito");

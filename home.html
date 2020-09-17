@@ -24,18 +24,20 @@
         <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
         
         <!-- boton de perfil -->
-        <div class="dropdown" id="user">
-          <!-- <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" id="user" class="btn btn-light btn-lg btn-block"  class="py-2 d-none d-md-inline-block" role="button" class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="dropdown" id="nombreUsuario" >
+          <!-- <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" class="btn btn-light btn-lg btn-block"  class="py-2 d-none d-md-inline-block" role="button" class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           </a> -->
+          
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
             <a class="dropdown-item" href="cart.html">Mi carrito</a>
             <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" onclick="cerrarSesion()" href="index.html">Cerrar sesión</a>
+            <a class="dropdown-item" onclick="cerrarSesion()" id="cerrarSesion">Cerrar sesión</a>
           </div>
         </div>
-      </div>
+      </div>  
     </nav>
+    
     <main role="main">
       <section class="jumbotron text-center">
         <div class="m-5">

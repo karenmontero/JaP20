@@ -71,33 +71,29 @@
 </head>
 
 <body class="text-center" background="/Users/Karen Montero/Desktop/DW/Proyecto/JaP20/img/supermarket.jpg">
-  >
   <div class="container p-5">
     <div class="none" role="alert" style="position: relative; width:auto; top: 0;">
       <div id="wrapper">
 
-        <form name="login-form" class="login-form" action="home.html" method="post">
+        <form name="login-form" class="login-form">
         
           <div class="header">
           <h1>Ingreso a eMercado</h1>
           <span>Encuentra todos los articulos que estas buscando al alcance de un Click!</span>
           </div>
           <div class="content">
-          <input name="username" type="text" class="input username" id="username"  placeholder="Email adress" required autofocus />
+          <input name="username" type="text" class="username" id="username"  placeholder="Email adress" required autofocus />
           <div class="user-icon"></div>
-          <input name="password" type="password" class="input password" id="password" placeholder="Contraseña" required />
+          <input name="password" type="password" class="password" id="password" placeholder="Contraseña" required />
           <div class="pass-icon"></div>		
           </div>
           <div>
             <a href="#" id="forgot_pswd">¿Olvidaste la contraseña?</a>
           </div>
-          <div >
-            <label for="remember-me" class="text-info"><span id="form-group">Remember me</span> <span><input id="password" name="remember-me" type="checkbox" onclick="recordar(password);></span><br>
-          </div>
       
           <div class="footer">
-          <input type="submit" name="submit" value="Ingresar" class="button" onclick="guardar(user);"/>
-          <input type="submit" name="submit" value="Registrarme" class="register" action="register.html"/>
+          <input type="button" name="submit" value="Ingresar" class="button" onclick="guardarDatos(username.value);"/>
+          <!-- <input type="submit" name="submit" value="Registrarme" class="register" action="register.html"/> -->
           </div>
           
         

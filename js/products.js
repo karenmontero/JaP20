@@ -7,6 +7,7 @@ var minCost = undefined;
 var maxCost = undefined;
 var ProductsArray = [];
 
+//Funcion que muestra la lista de productos del json
 function showProductsList(array){
 
     let htmlContentToAppend = "";
@@ -55,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function(e){
 });
 
 
-
+//Funcion de filtrar los productos de acuerdo al costo (ascendente o descendente)
 function sortProducts(criteria, array){
     let result = [];
        if (criteria === ORDER_ASC_BY_COST)
@@ -85,6 +86,7 @@ function sortProducts(criteria, array){
     return result;
 }
 
+//Muestra los productos en orden segun el filtro de precio utilizado.
 function showProductsList(){
 
  let htmlContentToAppend = "";
@@ -180,13 +182,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
         showProductsList();
     });
-    //var buscar = document.getElementById("filterByWord").value;
-    //if ((buscar != undefined) >= ""){
-    //    buscar = parseInt(buscar);
-    //}
-    //else{
-    //    buscar = undefined;
-    //}
 });
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
