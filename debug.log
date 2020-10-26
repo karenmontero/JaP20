@@ -2,3 +2,4 @@
 [0930/213723.169:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
 [0930/213723.169:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acceso denegado} Un proceso ha solicitado acceso a un objeto, pero no se le han concedido esos derechos de acceso. (0xc0000022)
 [0930/213723.408:ERROR:exception_snapshot_win.cc(99)] thread ID 14640 not found in process
+[1025/192245.061:ERROR:directory_reader_win.cc(43)] FindFirstFile: El sistema no puede encontrar la ruta especificada. (0x3)
