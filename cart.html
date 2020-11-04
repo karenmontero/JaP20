@@ -41,18 +41,18 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      
+
       <!-- boton de perfil -->
-      <div class="dropdown" id="nombreUsuario" >
-        
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+      <div class="dropdown" id="nombreUsuario">
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <a class="dropdown-item" href="cart.html">Mi carrito</a>
           <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" onclick="cerrarSesion()" id="cerrarSesion">Cerrar sesión</a>
         </div>
       </div>
-    </div>  
+    </div>
   </nav>
   <div id="spinner-wrapper">
     <div class="lds-ring">
@@ -66,9 +66,9 @@
     <div class="text-center p-4">
       <h2>Carrito de compras</h2>
     </div>
-     <!--productos-->
+    <!--productos-->
 
-     <table class="table">
+    <table class="table">
       <thead>
         <tr>
           <th scope="col"></th>
@@ -82,75 +82,82 @@
       <tbody id="containerArticle">
       </tbody>
     </table>
-</div>
-<div class="container">
-<hr>
-<br>
-</div>
-<!-- Formulario de datos de envio -->
-<div class="container">
-  <fieldset class="form-group">
-  <form class="needs-validation" id="buyForm">
-    <hr class="mb-4">
-      <div class="row container">
-        <h4 class="mb-3">Tipo de envío</h4>
-        <div class="d-block my-3">
-          <br>
-          <div class="form-check custom-control custom-radio">
-            <input class="form-check-input" type="radio" name="envio" id="envio1" value="option1">
-            <label class="form-check-label">
-              Premium 2 a 5 días (15%)
-            </label>
-          </div>
-        </form>
-          <div class="form-check custom-control custom-radio">
-            <input class="form-check-input" type="radio" name="envio" id="envio2" value="option2">
-            <label class="form-check-label">
-                Express 5 a 8 días (7%)
-            </label>
-          </div>
-          <div class="form-check disabled custom-control custom-radio">
-            <input class="form-check-input" type="radio" name="envio" id="envio3" value="option3">
-            <label class="form-check-label">
-              Standard 12 a 15 días (5%)
-            </label>
-          </div>
+  </div>
+  <div class="container">
+    <hr>
+    <br>
+  </div>
+  <!-- Formulario de datos de envio -->
+  <div class="container">
+    <fieldset class="form-group">
+      <form class="needs-validation" id="buyForm">
+        <hr class="mb-4">
+        <div class="row container">
+          <h4 class="mb-3">Tipo de envío</h4>
+          <div class="d-block my-3">
+            <br>
+            <div class="form-check custom-control custom-radio">
+              <input class="form-check-input" type="radio" name="envio" id="envio1" value="option1">
+              <label class="form-check-label">
+                Premium 2 a 5 días (15%)
+              </label>
+            </div>
+      </form>
+      <div class="form-check custom-control custom-radio">
+        <input class="form-check-input" type="radio" name="envio" id="envio2" value="option2">
+        <label class="form-check-label">
+          Express 5 a 8 días (7%)
+        </label>
+      </div>
+      <div class="form-check disabled custom-control custom-radio">
+        <input class="form-check-input" type="radio" name="envio" id="envio3" value="option3">
+        <label class="form-check-label">
+          Standard 12 a 15 días (5%)
+        </label>
+      </div>
+  </div>
+  </div>
+  <div>
+    <button class="btn btn-primary" onclick="validacionEnvio()">Añadir dirección de envio</button>
+    <div id="validar"></div>
+  </div>
+  </fieldset>
+  </div>
+  <div class="container" id="envio">
+  </div><br>
+  <!--Costos-->
+  <!--Seleccionar moneda con un select-->
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h4 class="mb-3">Costos</h4>
+        <div class="form-group mx-sm-3">
+          <label for="inputDepartamento3" class="col-sm-2 col-form-label">Elegir moneda</label>
+          <option value="" disabled selected></option>
+          <select name="moneda" class="browser-default custom-select">
+            <option onclick="cambiarMoneda()">UY</option>
+            <option onclick="cambiarMoneda()">USD</option>
+          </select>
         </div>
+        <!-- Costos -->
+        <ul class="list-group mb-3">
+          <li class="list-group-item justify-content-between d-flex">
+            <h5>SubTotal </h5><span id="subtotalT"></span><!-- Agregar descripcion -->
+          </li>
+          <li class="list-group-item justify-content-between d-flex">
+            <h5>Costo de envio </h5><span id="costoEnvio"></span>
+          </li>
+          <li class="list-group-item justify-content-between d-flex">
+            <h5>Total </h5><span id="totalCost"></span>
+          </li>
+        </ul>
       </div>
-      <div>
-          <button class="btn btn-primary" onclick="validacionEnvio()">Añadir dirección de envio</button>
-          <div id="validar"></div>
-      </div>
-    </fieldset>
-  </div>
-    <div class="container" id="envio">
-</div><br>
-<!--Costos-->
-<!--Seleccionar moneda con un select-->
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <h4 class="mb-3">Costos</h4>
-      <div class="form-group mx-sm-3">
-        <label for="inputDepartamento3" class="col-sm-2 col-form-label">Elegir moneda</label>
-        <option value="" disabled selected></option>
-        <select name="moneda" class="browser-default custom-select">
-        <option onclick="cambiarMoneda()">UY</option>
-        <option onclick="cambiarMoneda()">USD</option>
-      </select>
     </div>
-    <!-- Costos -->
-    <ul class = "list-group mb-3">
-      <li class="list-group-item justify-content-between d-flex"><h5>SubTotal </h5><span id="subtotalT"></span><!-- Agregar descripcion --></li>
-      <li class="list-group-item justify-content-between d-flex"><h5>Costo de envio </h5><span id="costoEnvio"></span></li>
-      <li class="list-group-item justify-content-between d-flex"><h5>Total </h5><span id="totalCost"></span></li>
-    </ul>  
-  </div>
-</div>
-<div class="col-lg-12">
-  <div class="text-right">
-      <button class="btn btn-primary lg" type="button" id="valid2" data-toggle="modal" data-target="#centralModalInfo">Seleccionar forma de pago</button><!-- Boton para que aparezca el modal -->
-  </div>
+    <div class="col-lg-12">
+      <div class="text-right">
+        <button class="btn btn-primary lg" type="button" onclick="validacionDireccion()" id="valid2" data-toggle="modal"
+          data-target="#centralModalInfo">Seleccionar forma de pago</button><!-- Boton para que aparezca el modal -->
+      </div>
       <!-- Modal -->
       <div class="modal fade" id="centralModalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
         aria-hidden="true">
@@ -167,43 +174,111 @@
             <!--Contenido principal del modal-->
             <div class="modal-body">
               <div class="text-center">
-            <div class="payment">
-              <form>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios" id="pagoTarj" value="option" onclick="expandir()">
-                  <label class="form-check-label" for="tarjeta">
-                    Tarjeta de crédito
-                  </label>
+                <div class="payment">
+                  <form>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="pagoTarj" value="option">
+                      <label class="form-check-label" for="tarjeta">
+                        Tarjeta de crédito
+                      </label>
+                    </div>
+                    <div class="form-check" id="tarjeta">
+                      <br>
+                      <div id="expandir" style="display:none" class="text-center">
+                        <div class="form-row">
+                          <div class="col-md-4 mb-3">
+                            <label for="validationServer01">Nombre</label>
+                            <input type="text" class="form-control" id="validationServer01" placeholder="Nombre"
+                              value="" required></input>
+                            <div class="valid-feedback">
+                            </div>
+                          </div>
+                          <div class="col-md-4 mb-3">
+                            <label for="validationServer02">Apellido</label>
+                            <input type="text" class="form-control" id="validationServer02" placeholder="Apellido"
+                              value="" required></input>
+                            <div class="valid-feedback">
+                            </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                              <label for="validationServer03">Número de tarjeta</label>
+                              <input type="number" class="form-control" id="validationServer03" value=""
+                                placeholder="Numero" required></input>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                              <label for="validationServer04">CVV</label>
+                              <input type="number" class="form-control" id="validationServer04" placeholder="cvv"
+                                value="" required></input>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                              <label for="validationServer05">Vencimiento</label><br>
+                              <select class="form-control" name="mes" placeholder="Mes" id="validationServer05"
+                                value="" required>
+                                <option value="1">Enero</option>
+                                <option value="2">Febrero</option>
+                                <option value="3">Marzo</option>
+                                <option value="4">Abril</option>
+                                <option value="5">Mayo</option>
+                                <option value="6">Junio</option>
+                                <option value="7">Julio</option>
+                                <option value="8">Agosto</option>
+                                <option value="9">Septiembre</option>
+                                <option value="10">Octubre</option>
+                                <option value="11">Noviembre</option>
+                                <option value="12">Diciembre</option>
+                              </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                              <label for=""></label><br>
+                              <input type="number" class="form-control" id="validationServer06" placeholder="Año"
+                                required min="2020"></input>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="transBanc" value="option">
+                        <label class="form-check-label" for="transferencia">
+                          Transferencia bancaria
+                        </label>
+                        <div class="form-check" id="transferencia">
+                          <br>
+                          <div id="expand" style="display:none" class="text-center">
+                            <div class="col-md-6 mb-3">
+                              <label for="validationServer">Nº de cuenta</label>
+                              <input type="number" id="validationServer0" placeholder="Número" min="1" required></input>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </form>
                 </div>
-                  <div class="form-check" id="tarjeta">
-                  </div>
-                  <hr>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="transBanc" value="option" onclick="expand()">
-                    <label class="form-check-label" for="transferencia">
-                      Transferencia bancaria
-                    </label>
-                    <div class="form-check" id="transferencia">
-                    </div> 
-              </form>
-          </div>
-          </div>
-            <!--Footer-->
-            <div class="modal-footer justify-content-center">
-              <button type="button" id="fin" class="btn btn-primary text-center">Finalizar compra</button>
-              <div id="fin"></div>
-              <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Cancelar</a>
+              </div>
+              <!--Footer-->
+              <div class="modal-footer justify-content-center">
+                <button type="button" id="fin" class="btn btn-primary text-center" onclick="validacion()">Finalizar compra</button>
+                <div id="fin"></div>
+                <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Cancelar</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>  
   </div>
-</div>
-<br>
-</div>
-<div id="spinner-wrapper"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
+  </div>
+  <br>
+  </div>
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>

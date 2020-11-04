@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
-<html lang="en">
+<html lang="en" class="h-100">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -21,6 +21,7 @@
       -ms-user-select: none;
       user-select: none;
     }
+    
 
     @media (min-width: 768px) {
       .bd-placeholder-img-lg {
@@ -40,42 +41,111 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      
+
       <!-- boton de perfil -->
-      <div class="dropdown" id="nombreUsuario" >
-        <!-- <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" class="btn btn-light btn-lg btn-block"  class="py-2 d-none d-md-inline-block" role="button" class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        </a> -->
-        
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+      <div class="dropdown" id="nombreUsuario">
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <a class="dropdown-item" href="cart.html">Mi carrito</a>
           <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" onclick="cerrarSesion()" id="cerrarSesion">Cerrar sesión</a>
         </div>
       </div>
-    </div>  
+    </div>
   </nav>
 
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 7 (Fecha de entrega: 8/11/202020) -> Punto 1 y 2.</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+    
+
+
+  <div class="container h-100">
+    <div class="col align-self-center">
+      <div class="tab-pane active" id="profile">
+        <table class="table-responsive" style="margin: 0 auto;">
+          <thead>
+            <tr>
+              <th scope="col">Mi Perfil</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+              <div class="card border-0 rounded-0 justify-content-center"> 
+              <img class="rounded mx-auto d-block" src="img/profile.png" style="width:120px;height:120px">
+              </th>
+              <th scope="row">
+                <div id="datos" class="row justify-content-center h-100">
+                      <h1 class="font-weight-light"><span id="nombreBig"></span></h1>
+                    <ul style="list-style-type:none">
+                      <li>Edad: <span id="edadNew"></span></li>
+                      <li>Número de telefono: <span id="telefonoNew"></span></li>
+                      <li>Correo electronico: <span id="correoNew"></span></li>
+                    </ul>
+                  </div>
+                </th>
+            </tr>
+          </tbody>
+        </table>
     </div>
   </div>
-  <footer class="text-muted bg-light">
-    <div class="container">
-      <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
-      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+  </div> 
+  <div class="row justify-content-center h-100">
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modificar">
+    Modificar Perfil
+  </button>
+</div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="modificar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Editar datos de perfil</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form role="form" method="POST" action="">
+          <div class="form-group row">
+            <label class="col-lg-3">Nombre</label>
+            <div class="col-lg-9">
+              <input class="form-control" type="text" value="" id="nombreN">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-lg-3">Apellido</label>
+            <div class="col-lg-9">
+              <input class="form-control" type="text" value="" id="apellidoN">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-lg-3">Edad</label>
+            <div class="col-lg-9">
+              <input class="form-control" type="number" id="edadN" value="">
+            </div>
+            <div class="form-group row">
+              <label class="col-lg-3">Telefono</label>
+              <div class="col-lg-9">
+                <input class="form-control" type="number" id="telefonoN" value="">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-lg-3">Email</label>
+              <div class="col-lg-9">
+                <input class="form-control" type="email" id="correoN" value="">
+              </div>
+            </div>
+        </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" onclick="guardarPerfil()">Guardar</button>
+        </div>
+      </div>
     </div>
-  </footer>
-  <div class="alert fade alert-success" role="alert" id="alertResult">
-    <span id="resultSpan"></span>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
   </div>
+
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
