@@ -39,7 +39,7 @@ function guardarPerfil(){
     telefonoHTML = document.getElementById("telefonoNew");
     correoHTML= document.getElementById("correoNew");
 
-    nombreBigHTML.innerHTML = guardar.Nombre + " " + guardar.Apellido
+    //nombreBigHTML.innerHTML = guardar.Nombre + " " + guardar.Apellido;
     nombreHTML.innerHTML = guardar.Nombre;
     apellidoHTML.innerHTML = guardar.Apellido;
     edadHTML.innerHTML = guardar.Edad + " años";

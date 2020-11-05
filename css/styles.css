@@ -170,3 +170,18 @@ a.custom-card:hover {
 color: black;  
 text-align: center;
 }
+
+.listaDatos {
+  text-align: left !important;
+  color: black !important;
+  list-style-type: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.perfilbody {
+  background-image: url(https://previews.123rf.com/images/arrow/arrow1508/arrow150800028/43966988-online-shopping-e-commerce-concept-background.jpg) !important; 
+}
+.perfil{
+  background-color: skyblue !important;
+}

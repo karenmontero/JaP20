@@ -34,7 +34,7 @@
   <link href="css/dropzone.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="perfilbody">
   <nav class="site-header sticky-top py-1 bg-dark">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
       <a class="py-2 d-none d-md-inline-block" href="home.html">Inicio</a>
@@ -54,38 +54,24 @@
       </div>
     </div>
   </nav>
-
-    
-
-
-  <div class="container h-100">
+  <div class="container perfil">
     <div class="col align-self-center">
       <div class="tab-pane active" id="profile">
-        <table class="table-responsive" style="margin: 0 auto;">
-          <thead>
-            <tr>
-              <th scope="col">Mi Perfil</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">
-              <div class="card border-0 rounded-0 justify-content-center"> 
+        <div class="main row" style="margin: 5%;">
+              <h4 class="col-md-12">Mi Perfil</h4>
+              <div class="col-md-4"> 
               <img class="rounded mx-auto d-block" src="img/profile.png" style="width:120px;height:120px">
-              </th>
-              <th scope="row">
-                <div id="datos" class="row justify-content-center h-100">
-                      <h1 class="font-weight-light"><span id="nombreBig"></span></h1>
-                    <ul style="list-style-type:none">
-                      <li>Edad: <span id="edadNew"></span></li>
-                      <li>Número de telefono: <span id="telefonoNew"></span></li>
-                      <li>Correo electronico: <span id="correoNew"></span></li>
+              </div>
+                <div class="col-md-8">
+                    <ul>
+                      <li class="listaDatos"><strong>Nombre:</strong> <span id="nombreNew"></span></li>
+                      <li class="listaDatos"><strong>Apellido:</strong> <span id="apellidoNew"></span></li>
+                      <li class="listaDatos"><strong>Edad:</strong><span id="edadNew"></span></li>
+                      <li class="listaDatos"><strong>Teléfono:</strong> <span id="telefonoNew"></span></li>
+                      <li class="listaDatos"><strong>Email:</strong> <span id="correoNew"></span></li>
                     </ul>
                   </div>
-                </th>
-            </tr>
-          </tbody>
-        </table>
+                </div>
     </div>
   </div>
   </div> 
@@ -124,15 +110,17 @@
             <div class="col-lg-9">
               <input class="form-control" type="number" id="edadN" value="">
             </div>
+            <br>
             <div class="form-group row">
-              <label class="col-lg-3">Telefono</label>
-              <div class="col-lg-9">
+              <label class="col-md-3">Telefono</label>
+              <div class="col-md-9">
                 <input class="form-control" type="number" id="telefonoN" value="">
               </div>
+              <br>
             </div>
             <div class="form-group row">
-              <label class="col-lg-3">Email</label>
-              <div class="col-lg-9">
+              <label class="col-md-3">Email</label>
+              <div class="col-md-9">
                 <input class="form-control" type="email" id="correoN" value="">
               </div>
             </div>
@@ -140,7 +128,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary" onclick="guardarPerfil()">Guardar</button>
+          <button type="button" class="btn btn-primary" id="botonGuardar">Guardar</button>
         </div>
       </div>
     </div>
